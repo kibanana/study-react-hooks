@@ -3,7 +3,8 @@ import './App.css';
 import ReactCompoundSlider from './components/ReactCompoundSlider'
 // import ReactGridGallery1 from './components/ReactGridGallery1'
 // import ReactGridGallery2 from './components/ReactGridGallery2'
-import ReactGridGallery3 from './components/ReactGridGallery3'
+// import ReactGridGallery3 from './components/ReactGridGallery3' // error
+// import ReactGridGallery4 from './components/ReactGridGallery4' // error
 
 function App() {
   return (
