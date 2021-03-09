@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Lightbox from 'react-images';
-import Image from './Image.js';
+import Image from './Image';
 
 export default class Gallery extends Component {
     constructor (props) {
