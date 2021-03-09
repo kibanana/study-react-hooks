@@ -151,7 +151,7 @@ class Handle extends Component {
             }}
           >
             <div className="tooltip">
-              <span className="tooltiptext">Value: {value}</span>
+              <span className="tooltiptext">현재 값은 {value}입니다!</span>
             </div>
           </div>
         ) : null}
@@ -188,7 +188,8 @@ class Handle extends Component {
             border: 0,
             borderRadius: '50%',
             boxShadow: '1px 1px 1px 1px rgba(0, 0, 0, 0.2)',
-            backgroundColor: disabled ? '#666' : '#8b6068',
+            backgroundColor: disabled ? '#666' : '#ffffff',
+            opacity: 0.8,
           }}
         />
       </Fragment>
@@ -205,7 +206,6 @@ const Track = ({
   getTrackProps,
   disabled,
 }) => {
-    console.log(target.percent, source.percent, target.percent - source.percent)
   return (
     <div
       style={{
@@ -293,7 +293,7 @@ const sliderStyle = {
         <div style={{ height: 120, width: '100%' }}>
           <Slider
             mode={1}
-            step={1}
+            step={10}
             domain={domain}
             rootStyle={sliderStyle}
             onUpdate={this.onUpdate}
@@ -318,7 +318,7 @@ const sliderStyle = {
                 </div>
               )}
             </Handles>
-            <Tracks left={false} right={false}>
+            <Tracks right={false}>
               {({ tracks, getTrackProps }) => (
                 <div className="slider-tracks">
                   {tracks.map(({ id, source, target }) => (
