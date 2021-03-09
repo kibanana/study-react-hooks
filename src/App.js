@@ -6,6 +6,7 @@ import ReactCompoundSlider from './components/ReactCompoundSlider';
 // import ReactGridGallery3 from './components/ReactGridGallery3'; // error
 // import ReactGridGallery4 from './components/ReactGridGallery4'; // error
 // import ReactGridGallery5 from './components/ReactGridGallery5'; // error
+// import ReactGridGallery6 from './components/ReactGridGallery6'; // error
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <ReactCompoundSlider />
         </div>
         <div>
-          <ReactGridGallery5 />
+          <ReactGridGallery6 />
         </div>
       </body>
     </div>
