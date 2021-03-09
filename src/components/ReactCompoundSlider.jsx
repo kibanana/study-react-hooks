@@ -268,7 +268,7 @@ const sliderStyle = {
   };
   
   const domain = [0, 500];
-  const defaultValues = [200];
+  const defaultValues = [200, 300, 400];
   
   export default class ReactCompoundSlider extends Component {
     state = {
@@ -292,7 +292,7 @@ const sliderStyle = {
       return (
         <div style={{ height: 120, width: '100%' }}>
           <Slider
-            mode={1}
+            mode={2}
             step={10}
             domain={domain}
             rootStyle={sliderStyle}
@@ -318,7 +318,7 @@ const sliderStyle = {
                 </div>
               )}
             </Handles>
-            <Tracks right={false}>
+            <Tracks left={false} right={false}>
               {({ tracks, getTrackProps }) => (
                 <div className="slider-tracks">
                   {tracks.map(({ id, source, target }) => (
