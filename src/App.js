@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import HookExample from './components/HookExample';
 import EffectHook from './components/HookExample/EffectHook'
+import CustomHookExample1 from './components/HookExample/CustomHookExample1';
+import CustomHookExample2 from './components/HookExample/CustomHookExample2';
 import ReactCompoundSlider from './components/ReactCompoundSlider';
 // import ReactGridGallery1 from './components/ReactGridGallery1';
 // import ReactGridGallery2 from './components/ReactGridGallery2';
@@ -21,6 +23,10 @@ function App() {
         </div>
         <div>
           <EffectHook />
+        </div>
+        <div>
+          <CustomHookExample1 />
+          <CustomHookExample2 />
         </div>
       </body>
     </div>
