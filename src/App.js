@@ -8,6 +8,7 @@ import ContextExample from './components/HookExample/ContextExample';
 import ContextHook from './components/HookExample/ContextHook';
 import ReducerHook from './components/HookExample/TodoReducerHook';
 import ReducerHookExample from './components/HookExample/ReducerHookExample';
+import RefHookExample from './components/HookExample/RefHookExample';
 import ReactCompoundSlider from './components/ReactCompoundSlider';
 import ReactGridGallery1 from './components/ReactGridGallery1';
 import ReactGridGallery2 from './components/ReactGridGallery2';
@@ -50,10 +51,14 @@ function App() {
           <ContextHook />
         </div>
         <div>
-          <h1>useReducer example</h1>
+          <h1>useReducer(specific / general) example</h1>
           <ReducerHook />
           <hr />
           <ReducerHookExample />
+        </div>
+        <div>
+          <h1>useRef example</h1>
+          <RefHookExample />
         </div>
       </body>
     </div>

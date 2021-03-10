@@ -3,14 +3,12 @@ export default function reducer(state, action) {
         case 'add':
             return {
                 ...state,
-                [action.key]: [...state[action.key], action.value]
+                [action.key]: action.value
             }
         case 'delete':
-            const temp = state[action.key];
-            temp.pop();
             return {
                 ...state,
-                [action.key]: temp
+                [action.key]: action.value
             }
         default:
             throw new Error();

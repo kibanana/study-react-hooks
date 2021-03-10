@@ -1,43 +1,41 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import reducer from './reducer';
 
 const todoList = ['Running', 'Have a time with a cat', 'Walk the riverside'];
 const hobbyList = ['Painting', 'Drawing', 'Shopping'];
-const initialState = { todos: [todoList[0]], hobbies: [hobbyList[0]] };
 const TODO = 'todos';
+const TODOCOUNT = 'todoCount'
 const HOBBY = 'hobbies';
+const HOBBYCOUNT = 'hobbyCount'
+const initialState = { [TODO]: [todoList[0]], [TODOCOUNT]: 0, [HOBBY]: [hobbyList[0]], [HOBBYCOUNT]: 0 };
 
 export default function Todos() {
-    const [todoCount, setTodoCount] = useState(0);
-    const [hobbyCount, setHobbyCount] = useState(0);
     const [state, dispatch] = useReducer(reducer, initialState);
-    const { todos, hobbies } = state
+    const { todos, todoCount, hobbies, hobbyCount } = state;
 
     function handleAddClick(key, text) {
-        dispatch({ type: 'add', key, value: text });
+        const countKey = key === TODO ? TODOCOUNT : HOBBYCOUNT;
+        dispatch({ type: 'add', key, value: [...state[key], text] });
+        dispatch({ type: 'add', key: countKey, value: state[countKey] + 1 });
     }
 
     function handleDeleteClick(key) {
-        dispatch({ type: 'delete', key });
+        const countKey = key === TODO ? TODOCOUNT : HOBBYCOUNT;
+
+        dispatch({ type: 'delete', key, value: state[key].splice(0, state[key].length -1) });
+        if (state[countKey] >= 0) {
+            dispatch({ type: 'delete', key: countKey, value: state[countKey] - 1 });
+        }
+        
     }
 
     return (
         <div>
-            <button
-                onClick={() => {
-                    handleAddClick(TODO, todoList[(todoCount + 1) % todoList.length]);
-                    setTodoCount(todoCount + 1);
-                }}
-            >
+            <button onClick={() => handleAddClick(TODO, todoList[(todoCount + 1) % todoList.length])} >
                 Add To-Do Item
             </button>
 
-            <button
-                onClick={() => {
-                    handleDeleteClick(TODO);
-                    if (todoCount >= 0) setTodoCount(todoCount - 1);
-                }}
-            >
+            <button onClick={() => handleDeleteClick(TODO)}>
                 Delete To-Do Item
             </button>
 
@@ -49,21 +47,11 @@ export default function Todos() {
                 }
             </div>
 
-            <button
-                onClick={() => {
-                    handleAddClick(HOBBY, hobbyList[(hobbyCount + 1) % hobbyList.length]);
-                    setHobbyCount(hobbyCount + 1);
-                }}
-            >
+            <button onClick={() => handleAddClick(HOBBY, hobbyList[(hobbyCount + 1) % hobbyList.length])}>
                 Add To-Do Item
             </button>
 
-            <button
-                onClick={() => {
-                    handleDeleteClick(HOBBY);
-                    if (hobbyCount >= 0) setHobbyCount(hobbyCount - 1);
-                }}
-            >
+            <button onClick={() => handleDeleteClick(HOBBY)}>
                 Delete To-Do Item
             </button>
 
