@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import HookExample from './components/HookExample';
-import EffectHook from './components/HookExample/EffectHook'
+import EffectHook from './components/HookExample/EffectHook';
 import CustomHookExample1 from './components/HookExample/CustomHookExample1';
 import CustomHookExample2 from './components/HookExample/CustomHookExample2';
+import ContextExample from './components/HookExample/ContextExample';
+import ContextHook from './components/HookExample/ContextHook';
 import ReactCompoundSlider from './components/ReactCompoundSlider';
 // import ReactGridGallery1 from './components/ReactGridGallery1';
 // import ReactGridGallery2 from './components/ReactGridGallery2';
@@ -19,14 +21,23 @@ function App() {
       </header>
       <body style={{ margin: '100px 50px' }}>
         <div>
+          <h1>React Compound Slider</h1>
           <ReactCompoundSlider />
         </div>
         <div>
+          <h1>useState, useEffect hooks example</h1>
           <EffectHook />
         </div>
         <div>
+          <h1>custom hook examples</h1>
           <CustomHookExample1 />
           <CustomHookExample2 />
+        </div>
+        <div>
+          <h1>context, useContext examples</h1>
+          <ContextExample />
+          <hr />
+          <ContextHook />
         </div>
       </body>
     </div>

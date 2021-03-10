@@ -1,5 +1,5 @@
 import React from 'react';
-import useFriendStatus from './CustomHook';
+import useFriendStatus from './useFriendStatus';
 import './gradientText.scss';
 
 export default function CustomHookExample1() {
@@ -7,11 +7,11 @@ export default function CustomHookExample1() {
     const isOnline = useFriendStatus(friendId);
 
     return (
-        <p className="instagram">
+        <h3 className="instagram">
             <span>
 
             friend {friendId}: {isOnline ? '온라인' : '오프라인'}이다.
             </span>
-        </p>
+        </h3>
     )
 }
