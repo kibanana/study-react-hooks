@@ -6,6 +6,8 @@ import CustomHookExample1 from './components/HookExample/CustomHookExample1';
 import CustomHookExample2 from './components/HookExample/CustomHookExample2';
 import ContextExample from './components/HookExample/ContextExample';
 import ContextHook from './components/HookExample/ContextHook';
+import ReducerHook from './components/HookExample/TodoReducerHook';
+import ReducerHookExample from './components/HookExample/ReducerHookExample';
 import ReactCompoundSlider from './components/ReactCompoundSlider';
 import ReactGridGallery1 from './components/ReactGridGallery1';
 import ReactGridGallery2 from './components/ReactGridGallery2';
@@ -30,7 +32,7 @@ function App() {
         <div>
           <ReactGridGallery2 />
         </div>
-        
+
         <div>
           <h1>useState, useEffect hooks example</h1>
           <HookExample />
@@ -46,6 +48,12 @@ function App() {
           <ContextExample />
           <hr />
           <ContextHook />
+        </div>
+        <div>
+          <h1>useReducer example</h1>
+          <ReducerHook />
+          <hr />
+          <ReducerHookExample />
         </div>
       </body>
     </div>
