@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import HookExample from './components/HookExample';
+import EffectHook from './components/HookExample/EffectHook'
 import ReactCompoundSlider from './components/ReactCompoundSlider';
 // import ReactGridGallery1 from './components/ReactGridGallery1';
 // import ReactGridGallery2 from './components/ReactGridGallery2';
@@ -18,7 +20,7 @@ function App() {
           <ReactCompoundSlider />
         </div>
         <div>
-          <ReactGridGallery6 />
+          <EffectHook />
         </div>
       </body>
     </div>
