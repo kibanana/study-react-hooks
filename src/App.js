@@ -7,8 +7,8 @@ import CustomHookExample2 from './components/HookExample/CustomHookExample2';
 import ContextExample from './components/HookExample/ContextExample';
 import ContextHook from './components/HookExample/ContextHook';
 import ReactCompoundSlider from './components/ReactCompoundSlider';
-// import ReactGridGallery1 from './components/ReactGridGallery1';
-// import ReactGridGallery2 from './components/ReactGridGallery2';
+import ReactGridGallery1 from './components/ReactGridGallery1';
+import ReactGridGallery2 from './components/ReactGridGallery2';
 // import ReactGridGallery3 from './components/ReactGridGallery3'; // error
 // import ReactGridGallery4 from './components/ReactGridGallery4'; // error
 // import ReactGridGallery5 from './components/ReactGridGallery5'; // error
@@ -20,12 +20,20 @@ function App() {
       <header>
       </header>
       <body style={{ margin: '100px 50px' }}>
+        <h1>React Compound Slider</h1>
         <div>
-          <h1>React Compound Slider</h1>
           <ReactCompoundSlider />
         </div>
+
+        <h1>React Grid Gallery</h1>
+
+        <div>
+          <ReactGridGallery2 />
+        </div>
+        
         <div>
           <h1>useState, useEffect hooks example</h1>
+          <HookExample />
           <EffectHook />
         </div>
         <div>
