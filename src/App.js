@@ -12,6 +12,8 @@ import ContextExample from './components/HookExample/ContextExample';
 import ContextHook from './components/HookExample/ContextHook';
 import ReducerHook from './components/HookExample/TodoReducerHook';
 import ReducerHookTodoExample from './components/HookExample/ReducerHookTodoExample';
+import ReducerHookUserExample1 from './components/HookExample/ReducerHookUserExample1';
+import ReducerHookUserExample2 from './components/HookExample/ReducerHookUserExample2';
 import RefHookExample from './components/HookExample/RefHookExample';
 import FancyInput from './components/HookExample/FancyInput';
 import ReactCompoundSlider from './components/ReactCompoundSlider';
@@ -29,10 +31,12 @@ function App() {
     inputRef.current.focus();
   });
 
-  const initialValue = { [TODO]: ['A TODO'], [TODOCOUNT]: 0, [HOBBY]: ['A HOBBY'], [HOBBYCOUNT]: 0, [CURRENT_USER]: {} };
+  const initialValue = { [TODO]: ['A TODO'], [TODOCOUNT]: 0, [HOBBY]: ['A HOBBY'], [HOBBYCOUNT]: 0, [CURRENT_USER]: null };
 
   const [state, dispatch] = useReducer(reducer, initialValue);
-  const store = useMemo(() => [state, dispatch], [state]);
+  const store = useMemo(() => [state, dispatch], [state]); // 1. useMemo
+  // const store = [state, dispatch]; // 2.
+  // 두 방법 다 가능. useMemo는 성능 향상을 목적으로 사용함.
 
   return (
     <div className="App">
@@ -71,8 +75,9 @@ function App() {
           <ReducerHook />
           <hr />
           <ReducerContext.Provider value={store}>
+            <ReducerHookUserExample1 />
             <ReducerHookTodoExample />
-            <hr />
+            <ReducerHookUserExample2 />
           </ReducerContext.Provider>
         </div>
         <div>
