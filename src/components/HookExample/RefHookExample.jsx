@@ -16,11 +16,12 @@ export default function TextInputWithFocusButton() {
           이름: 
           <input ref={inputNameEl} type="text" />
         </label>
-        <hr></hr>
+        <br />
         <label>
           나이: 
           <input ref={inputAgeEl} type="number" />
         </label>
+        <br />
         <button onClick={onButtonClick}>Focus the input</button>
       </form>
     );
