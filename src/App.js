@@ -16,13 +16,13 @@ import ReducerHookUserExample1 from './components/HookExample/ReducerHookUserExa
 import ReducerHookUserExample2 from './components/HookExample/ReducerHookUserExample2';
 import RefHookExample from './components/HookExample/RefHookExample';
 import FancyInput from './components/HookExample/FancyInput';
-import ReactCompoundSlider from './components/ReactCompoundSlider';
-import ReactGridGallery1 from './components/ReactGridGallery1';
-import ReactGridGallery2 from './components/ReactGridGallery2';
-import ReactGridGallery3 from './components/ReactGridGallery3'; // error
-import ReactGridGallery4 from './components/ReactGridGallery4'; // error
-import ReactGridGallery5 from './components/ReactGridGallery5'; // error
-import ReactGridGallery6 from './components/ReactGridGallery6'; // error
+import ReactCompoundSlider from './components/ReactCompoundSliderExample/ReactCompoundSlider';
+import ReactGridGallery1 from './components/ReactGridGalleryExample/ReactGridGallery1';
+import ReactGridGallery2 from './components/ReactGridGalleryExample/ReactGridGallery2';
+import ReactGridGallery3 from './components/ReactGridGalleryExample/ReactGridGallery3'; // error
+import ReactGridGallery4 from './components/ReactGridGalleryExample/ReactGridGallery4'; // error
+import ReactGridGallery5 from './components/ReactGridGalleryExample/ReactGridGallery5'; // error
+import ReactGridGallery6 from './components/ReactGridGalleryExample/ReactGridGallery6'; // error
 
 function App() {
   const inputRef = useRef();

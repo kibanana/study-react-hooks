@@ -17,7 +17,7 @@ export default function useFriendStatus(friendId) {
 
     useEffect(() => {
         setIsOnline(friends[friendId].isOnline);
-    });
+    }, [friendId]);
 
     return isOnline;
 }

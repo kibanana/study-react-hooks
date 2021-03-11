@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Slider, Rail, Handles, Tracks, Ticks } from 'react-compound-slider';
-import './tooltip.scss';
+import './ReactCompoundSlider.scss';
 
 // *******************************************************
 // TOOLTIP RAIL
