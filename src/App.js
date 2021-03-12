@@ -16,6 +16,9 @@ import ReducerHookUserExample1 from './components/HookExample/ReducerHookUserExa
 import ReducerHookUserExample2 from './components/HookExample/ReducerHookUserExample2';
 import RefHookExample from './components/HookExample/RefHookExample';
 import FancyInput from './components/HookExample/FancyInput';
+import HocHookExample1 from './components/HookExample/HocHookExample1';
+import HocHookExample2 from './components/HookExample/HocHookExample2';
+import HocHookExample3 from './components/HookExample/HocHookExample3';
 import ReactCompoundSlider from './components/CompoundSliderExample/ReactCompoundSlider';
 import ReactGridGallery1 from './components/GridGalleryExample/ReactGridGallery1';
 import ReactGridGallery2 from './components/GridGalleryExample/ReactGridGallery2';
@@ -85,6 +88,15 @@ function App() {
           <RefHookExample />
           <h1>useImperativeHandle, useRef example</h1>
           <FancyInput ref={inputRef} />
+        </div>
+        <div>
+          <h1>HOC with react hooks example</h1>
+          <h3>List</h3>
+          <HocHookExample1 />
+          <h3>Box List</h3>
+          <HocHookExample2 />
+          <h3>Ordered List</h3>
+          <HocHookExample3 />
         </div>
       </body>
     </div>
