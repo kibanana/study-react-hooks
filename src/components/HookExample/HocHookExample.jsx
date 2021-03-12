@@ -40,10 +40,15 @@ export default function withCharacterList (WrappedComponent) {
             setChracterList([popedItem, ...characterList]);
         }
 
+        const handleChracterItemAddButtonClick = (name, color) => {
+            setChracterList([...characterList, { name, color }]);
+        }
+
         return <WrappedComponent
             {...props}
             data={characterList}
             handleCharacterItemClick={handleCharacterItemClick}
+            handleChracterItemAddButtonClick={handleChracterItemAddButtonClick}
         />;
     }
 
