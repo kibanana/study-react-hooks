@@ -1,3 +1,7 @@
+- `useEffect`에서 특정 값을 초기화하면 무한루프를 돈다. 적어도 dependency 값을 잘 설정해줘야 한다.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
