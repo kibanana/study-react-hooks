@@ -34,7 +34,13 @@ function App() {
     inputRef.current.focus();
   });
 
-  const initialValue = { [TODO]: ['A TODO'], [TODOCOUNT]: 0, [HOBBY]: ['A HOBBY'], [HOBBYCOUNT]: 0, [CURRENT_USER]: null };
+  const initialValue = {
+    [TODO]: ['A TODO'],
+    [TODOCOUNT]: 0,
+    [HOBBY]: ['A HOBBY'],
+    [HOBBYCOUNT]: 0,
+    [CURRENT_USER]: null
+  };
 
   const [state, dispatch] = useReducer(reducer, initialValue);
   const store = useMemo(() => [state, dispatch], [state]); // 1. useMemo
